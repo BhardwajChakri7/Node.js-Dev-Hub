@@ -1,0 +1,1 @@
+const newobj = require('./exportObject')
