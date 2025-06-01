@@ -1,1 +1,1 @@
-const squares = require('./squares')
+const squares = require('./exportFunctionWithParameter')
