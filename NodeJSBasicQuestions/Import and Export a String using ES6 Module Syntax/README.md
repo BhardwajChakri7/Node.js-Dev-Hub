@@ -1,9 +1,9 @@
-# Import and Export an Object using Common JS Module Syntax
+# Import and Export a String using ES6 Module Syntax
 
-Create two files `exportObject.js`, `importObject.js` parallel to `README.md` file.
+Create two files `exportString.mjs`, `importString.mjs` parallel to `README.md` file.
 
-Write an object with keys as `firstName` and `lastName` and values as `John` and `Wilson` respectively in the file `exportObject.js` and export it using the default export syntax.
+Write a string `Be Happy and Safe` in the file `exportString.mjs` and export it using the default export syntax.
 
-Import the object in the `importObject.js` file.
+Import the string in the `importString.mjs` file.
 
-<b>Use Common JS module syntax</b>.
+<b>Use ES6 module syntax</b>.
