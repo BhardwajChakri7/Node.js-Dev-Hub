@@ -1,0 +1,1 @@
+const squares = require('./squares')
