@@ -27,62 +27,63 @@ const initializeDBAndServer = async () => {
   }
 }
 initializeDBAndServer()
-app.get('/books/', (request, response) => {
-  let jwtToken
-  const authHeader = request.headers['authorization']
-  if (authHeader !== undefined) {
-    jwtToken = authHeader.split(' ')[1]
-  }
-  if (jwtToken === undefined) {
-    response.status(401)
-    response.send('Invalid Access Token')
-  } else {
-    jwt.verify(jwtToken, 'MY_SECRET_TOKEN', async (error, payload) => {
-      if (error) {
-        response.send('Invalid Access Token')
-      } else {
-        const getBooksQuery = `
-            SELECT
-              *
-            FROM
-             book
-            ORDER BY
-              book_id;`
-        const booksArray = await db.all(getBooksQuery)
-        response.send(booksArray)
-      }
-    })
-  }
-})
-// Get Books API
-// app.get('/books/', async (request, response) => {
+// app.get('/books/', (request, response) => {
 //   let jwtToken
-//   const authHeaders = request.headers['authorization']
-//   if (authHeaders !== undefined) {
-//     jwtToken = authHeaders.split(' ')[1]
+//   const authHeader = request.headers['authorization']
+//   if (authHeader !== undefined) {
+//     jwtToken = authHeader.split(' ')[1]
 //   }
 //   if (jwtToken === undefined) {
 //     response.status(401)
 //     response.send('Invalid Access Token')
 //   } else {
-//     jwt.verify(jwtToken, 'My_lock', async (error, payload) => {
+//     jwt.verify(jwtToken, 'MY_SECRET_TOKEN', async (error, payload) => {
 //       if (error) {
-//         response.status(401)
 //         response.send('Invalid Access Token')
 //       } else {
 //         const getBooksQuery = `
-//         SELECT
-//           *
-//         FROM
-//           book
-//         ORDER BY
-//           book_id;`
+//             SELECT
+//               *
+//             FROM
+//              book
+//             ORDER BY
+//               book_id;`
 //         const booksArray = await db.all(getBooksQuery)
 //         response.send(booksArray)
 //       }
 //     })
 //   }
 // })
+
+//Get Books API
+app.get('/books/', async (request, response) => {
+  let jwtToken
+  const authHeaders = request.headers['authorization']
+  if (authHeaders !== undefined) {
+    jwtToken = authHeaders.split(' ')[1]
+  }
+  if (jwtToken === undefined) {
+    response.status(401)
+    response.send('Invalid Access Token')
+  } else {
+    jwt.verify(jwtToken, 'My_Lock', async (error, payload) => {
+      if (error) {
+        response.status(401)
+        response.send('Invalid Access Token')
+      } else {
+        const getBooksQuery = `
+        SELECT
+          *
+        FROM
+          book
+        ORDER BY
+          book_id;`
+        const booksArray = await db.all(getBooksQuery)
+        response.send(booksArray)
+      }
+    })
+  }
+})
 
 // User Register API
 app.post('/users/', async (request, response) => {
