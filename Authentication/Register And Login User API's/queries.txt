@@ -1,0 +1,29 @@
+// SelectUserQuery
+
+const selectUserQuery = `
+  SELECT 
+    * 
+  FROM 
+    user 
+  WHERE 
+    username = '${username}'`;
+
+    
+---------------------------------
+
+
+// CreateUserQuery
+
+const createUserQuery = `
+  INSERT INTO
+    user (username, name, password, gender, location)
+  VALUES
+    (
+      '${username}',
+      '${name}',
+      '${hashedPassword}',
+      '${gender}',
+      '${location}'  
+    );`;
+
+----------------------------
