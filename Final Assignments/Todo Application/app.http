@@ -1,0 +1,140 @@
+### Add Todo
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "todo": "Buy groceries",
+  "priority": "HIGH",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2025-06-20"
+}
+
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 2,
+  "todo": "Finish backend project",
+  "priority": "MEDIUM",
+  "status": "IN PROGRESS",
+  "category": "WORK",
+  "dueDate": "2025-06-21"
+}
+
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 3,
+  "todo": "Learn Express.js",
+  "priority": "HIGH",
+  "status": "DONE",
+  "category": "LEARNING",
+  "dueDate": "2025-06-22"
+}
+
+###
+
+### Get all todos with status = TO DO
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+
+### Get all todos with priority = HIGH
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+
+### Get all todos with priority = HIGH and status = IN PROGRESS
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+
+### Get all todos with category = WORK and status = DONE
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+###
+
+### Get all todos with category = LEARNING and priority = HIGH
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+###
+
+### Get all todos with category = HOME
+GET http://localhost:3000/todos/?category=HOME
+
+###
+
+### Search todos containing the word "Buy"
+GET http://localhost:3000/todos/?search_q=Buy
+
+###
+
+### Get todo by ID
+GET http://localhost:3000/todos/1/
+
+###
+
+### Get todos by date (agenda)
+GET http://localhost:3000/agenda/?date=2025-06-20
+
+###
+
+### Update Todo's Status
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "status": "IN PROGRESS"
+}
+
+###
+
+### Update Todo's Priority
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "priority": "LOW"
+}
+
+###
+
+### Update Todo text
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "todo": "Buy milk and bread"
+}
+
+###
+
+### Update Todo's Category
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "category": "WORK"
+}
+
+###
+
+### Update Todo's Due Date
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "dueDate": "2025-06-25"
+}
+
+###
+
+### Delete a todo
+DELETE http://localhost:3000/todos/1/
