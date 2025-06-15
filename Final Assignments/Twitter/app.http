@@ -1,0 +1,104 @@
+### Register User (Success)
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "john123",
+  "name": "John Doe",
+  "gender": "male"
+}
+
+### Register User (Already Exists)
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "john123",
+  "name": "John Doe",
+  "gender": "male"
+}
+
+### Register User (Short Password)
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "short_user",
+  "password": "123",
+  "name": "Short User",
+  "gender": "female"
+}
+
+### Login (Success)
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "john123"
+}
+
+### Login (Invalid Password)
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "wrongpassword"
+}
+
+### Login (Invalid User)
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "not_existing_user",
+  "password": "something"
+}
+
+### Get Tweets Feed
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Bearer {{jwtToken}}
+
+### Get Following List
+GET http://localhost:3000/user/following/
+Authorization: Bearer {{jwtToken}}
+
+### Get Followers List
+GET http://localhost:3000/user/followers/
+Authorization: Bearer {{jwtToken}}
+
+### Get Tweet Details
+GET http://localhost:3000/tweets/1/
+Authorization: Bearer {{jwtToken}}
+
+### Get Tweet Likes
+GET http://localhost:3000/tweets/1/likes/
+Authorization: Bearer {{jwtToken}}
+
+### Get Tweet Replies
+GET http://localhost:3000/tweets/1/replies/
+Authorization: Bearer {{jwtToken}}
+
+### Get My Tweets
+GET http://localhost:3000/user/tweets/
+Authorization: Bearer {{jwtToken}}
+
+### Post a New Tweet
+POST http://localhost:3000/user/tweets/
+Authorization: Bearer {{jwtToken}}
+Content-Type: application/json
+
+{
+  "tweet": "This is a new tweet from john_doe!"
+}
+
+### Delete a Tweet (owned tweet)
+DELETE http://localhost:3000/tweets/1/
+Authorization: Bearer {{jwtToken}}
+
+### Delete a Tweet (not owned tweet)
+DELETE http://localhost:3000/tweets/2/
+Authorization: Bearer {{jwtToken}}
