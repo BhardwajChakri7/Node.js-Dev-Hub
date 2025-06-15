@@ -1,0 +1,62 @@
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+###
+GET http://localhost:3000/states/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzQ5OTkwNDE2fQ.G4-gBv95cwu-ziHKHg4wkSOeo1UlYwS5pmmzDK6OtKg
+
+
+###
+GET http://localhost:3000/states/7/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzQ5OTkwNDE2fQ.G4-gBv95cwu-ziHKHg4wkSOeo1UlYwS5pmmzDK6OtKg
+
+###
+
+POST http://localhost:3000/districts/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzQ5OTkwNDE2fQ.G4-gBv95cwu-ziHKHg4wkSOeo1UlYwS5pmmzDK6OtKg
+Content-Type: application/json
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+
+GET http://localhost:3000/districts/500/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzQ5OTkwNDE2fQ.G4-gBv95cwu-ziHKHg4wkSOeo1UlYwS5pmmzDK6OtKg
+
+
+DELETE http://localhost:3000/districts/327/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4NjExMzE2fQ.HapFXLSsESPEy4fe_CVIqIcQ7NeZEXSQ1NKhAbdJ9EU
+
+
+###
+
+PUT http://localhost:3000/districts/350/
+Content-Type: application/json
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4NjExMzE2fQ.HapFXLSsESPEy4fe_CVIqIcQ7NeZEXSQ1NKhAbdJ9EU
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+
+GET http://localhost:3000/states/6/stats/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzA4NjExMzE2fQ.HapFXLSsESPEy4fe_CVIqIcQ7NeZEXSQ1NKhAbdJ9EU
+
+###
