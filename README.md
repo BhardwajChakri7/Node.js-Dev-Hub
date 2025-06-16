@@ -20,11 +20,6 @@ Welcome to **Node.js Dev Hub** – your all-in-one repository for mastering **se
 ✔️ Working with Databases: MongoDB, MySQL  
 ✔️ Authentication & Security: JWT, OAuth, Encryption  
 
-### 🛠️ **Projects & Examples**  
-🚀 **Simple API** – A beginner-friendly REST API with Express  
-📡 **Real-Time Chat App** – WebSockets-powered chat application  
-📦 **E-commerce Backend** – Full-featured backend with authentication & payments  
-🛠️ **CLI Tools** – Build your own command-line utilities  
 
 ---
 
