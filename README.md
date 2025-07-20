@@ -19,23 +19,3 @@ Welcome to **Node.js Dev Hub** – your all-in-one repository for mastering **se
 ✔️ Express.js Framework: Routing, Middleware, APIs  
 ✔️ Working with Databases: MongoDB, MySQL  
 ✔️ Authentication & Security: JWT, OAuth, Encryption  
-
-
----
-
-## 🚀 **Getting Started**  
-
-### 1️⃣ **Clone This Repository**  
-### 2️⃣ **Install Dependencies**
-### 3️⃣ **Run a Sample Project**
-```bash
-git clone https://github.com/yourusername/nodejs-dev-hub.git
-cd nodejs-dev-hub
-
----
-
-npm install
-
----
-
-node app.js
